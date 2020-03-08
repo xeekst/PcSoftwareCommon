@@ -63,6 +63,16 @@ namespace WinCommonSoftware.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap console {
             get {
                 object obj = ResourceManager.GetObject("console", resourceCulture);
@@ -196,6 +206,26 @@ namespace WinCommonSoftware.Properties {
         internal static System.Drawing.Bitmap python {
             get {
                 object obj = ResourceManager.GetObject("python", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap qq {
+            get {
+                object obj = ResourceManager.GetObject("qq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap qq_group {
+            get {
+                object obj = ResourceManager.GetObject("qq_group", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,0 +1,11 @@
+#### 主项目为WinCommonSoftware
+-- WinCommonSoftware
+	-- ControlUtils 控件通用的Util
+	-- Repository 仓储 直接操纵数据库
+	-- Resources 资源文件 图片 icon什么的
+	-- Utils 一些通用的类
+	-- Views 页面控件 下一级是组、每次新增一个组就增加一个目录
+		-- BaseViews 基础控件
+		-- HomeGroup 主页Group
+		-- ScriptGroup 脚本处理组
+	-- MainForm 主窗口 每个Group 没什么限制 但是注意：每个 Element 的tag属性 存储着点击后反射创建的 Form类 [ ClassTypeName,Param ]

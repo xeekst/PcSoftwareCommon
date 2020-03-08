@@ -84,7 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.runningtimeTxt.Location = new System.Drawing.Point(194, 25);
             this.runningtimeTxt.Name = "runningtimeTxt";
-            this.runningtimeTxt.Size = new System.Drawing.Size(458, 21);
+            this.runningtimeTxt.Size = new System.Drawing.Size(467, 21);
             this.runningtimeTxt.TabIndex = 8;
             // 
             // labelControl3
@@ -106,7 +106,7 @@
             this.RunBtn.Appearance.Options.UseFont = true;
             this.RunBtn.Appearance.Options.UseForeColor = true;
             this.RunBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.RunBtn.Location = new System.Drawing.Point(561, 145);
+            this.RunBtn.Location = new System.Drawing.Point(570, 145);
             this.RunBtn.Name = "RunBtn";
             this.RunBtn.Size = new System.Drawing.Size(91, 28);
             this.RunBtn.TabIndex = 6;
@@ -128,7 +128,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scriptArgsTxt.Location = new System.Drawing.Point(194, 95);
             this.scriptArgsTxt.Name = "scriptArgsTxt";
-            this.scriptArgsTxt.Size = new System.Drawing.Size(458, 21);
+            this.scriptArgsTxt.Size = new System.Drawing.Size(467, 21);
             this.scriptArgsTxt.TabIndex = 4;
             // 
             // selectExeBtn
@@ -141,7 +141,7 @@
             this.selectExeBtn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.selectExeBtn.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.selectExeBtn.Size = new System.Drawing.Size(458, 20);
+            this.selectExeBtn.Size = new System.Drawing.Size(467, 20);
             this.selectExeBtn.TabIndex = 3;
             this.selectExeBtn.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.selectExeBtn_ButtonClick);
             // 

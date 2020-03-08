@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>c-logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -99,8 +102,14 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\QQGroup\QQManagerInfoModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Repository\DatabaseConfigRepository.cs" />
     <Compile Include="Repository\DatabaseConfigSqlRepository.cs" />
     <Compile Include="Repository\Entity\DatabaseConfigEntity.cs" />
@@ -130,17 +139,35 @@
     <Compile Include="Views\HomeGroup\DataView\SQLViewControl.Designer.cs">
       <DependentUpon>SQLViewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageControl.Designer.cs">
+      <DependentUpon>QQManageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManagerOverviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManagerOverviewControl.Designer.cs">
+      <DependentUpon>QQManagerOverviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQGroupCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQGroupCard.Designer.cs">
+      <DependentUpon>QQGroupCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQManageGroupManageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQManageGroupManageControl.Designer.cs">
+      <DependentUpon>QQManageGroupManageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScriptGroup\CommonScript\ScriptConsoleControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ScriptGroup\CommonScript\ScriptConsoleControl.Designer.cs">
       <DependentUpon>ScriptConsoleControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -148,27 +175,31 @@
     <EmbeddedResource Include="Views\HomeGroup\DataView\DatabaseSettingControl.resx">
       <DependentUpon>DatabaseSettingControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Views\BaseViews\SimpleRichTextboxControl.resx">
       <DependentUpon>SimpleRichTextboxControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\HomeGroup\DataView\SQLViewControl.resx">
       <DependentUpon>SQLViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeGroup\QQManageGroup\QQManageControl.resx">
+      <DependentUpon>QQManageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeGroup\QQManageGroup\QQManagerOverviewControl.resx">
+      <DependentUpon>QQManagerOverviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQGroupCard.resx">
+      <DependentUpon>QQGroupCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HomeGroup\QQManageGroup\QQManageViews\QQManageGroupManageControl.resx">
+      <DependentUpon>QQManageGroupManageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ScriptGroup\CommonScript\ScriptConsoleControl.resx">
       <DependentUpon>ScriptConsoleControl.cs</DependentUpon>
@@ -184,6 +215,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\qq.png" />
+    <None Include="Resources\qq-group.png" />
     <None Include="Resources\mysql-logo.png" />
     <None Include="Resources\mssql-logo.jpg" />
     <None Include="Resources\mysql-setting.png" />
@@ -199,6 +232,8 @@
     <None Include="Resources\setting.png" />
     <None Include="Resources\homepage.png" />
     <None Include="Resources\data.png" />
+    <None Include="Resources\add.png" />
+    <Content Include="c-logo.ico" />
     <Content Include="Resources\manage.png" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +241,9 @@
       <Project>{5c5b38d2-fcd9-4940-b8ee-e540d7ce2910}</Project>
       <Name>X.Util.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\QQGroup\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

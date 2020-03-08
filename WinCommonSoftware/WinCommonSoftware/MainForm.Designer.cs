@@ -32,7 +32,6 @@
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTableHome = new DevExpress.XtraTab.XtraTabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.accordionControl = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionBottomHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_Home = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -40,11 +39,13 @@
             this.accordionHome_UserInfo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_DataView = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_MssqlGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionHome_MssqlSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionHome_MSSQLSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_MSSQLView = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_MysqlGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionHome_MysqlSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionHome_MYSQLSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionHome_MYSQLView = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionHome_QQManageGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionHome_QQManageItem1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionBottomMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -59,12 +60,17 @@
             this.accordionConsole_RunCmd = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionConsole_CSharp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionBottomQQManage = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionAddOneQQ = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionQQList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
-            this.xtraTableHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +79,10 @@
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.xtraTabControl);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(202, 27);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(217, 27);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(769, 635);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(782, 635);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // xtraTabControl
@@ -87,7 +93,7 @@
             this.xtraTabControl.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.xtraTableHome;
-            this.xtraTabControl.Size = new System.Drawing.Size(769, 635);
+            this.xtraTabControl.Size = new System.Drawing.Size(782, 635);
             this.xtraTabControl.TabIndex = 0;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTableHome});
@@ -95,20 +101,10 @@
             // 
             // xtraTableHome
             // 
-            this.xtraTableHome.Controls.Add(this.richTextBox1);
             this.xtraTableHome.Name = "xtraTableHome";
             this.xtraTableHome.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.xtraTableHome.Size = new System.Drawing.Size(763, 606);
+            this.xtraTableHome.Size = new System.Drawing.Size(776, 606);
             this.xtraTableHome.Text = "Home";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(763, 606);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
             // 
             // accordionControl
             // 
@@ -117,14 +113,15 @@
             this.accordionBottomHome,
             this.accordionBottomMenu,
             this.accordionBottomSetting,
-            this.accordionBottomScript});
+            this.accordionBottomScript,
+            this.accordionBottomQQManage});
             this.accordionControl.Location = new System.Drawing.Point(0, 27);
             this.accordionControl.Margin = new System.Windows.Forms.Padding(0);
             this.accordionControl.Name = "accordionControl";
             this.accordionControl.OptionsMinimizing.NormalWidth = 202;
             this.accordionControl.RootDisplayMode = DevExpress.XtraBars.Navigation.AccordionControlRootDisplayMode.Footer;
             this.accordionControl.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl.Size = new System.Drawing.Size(202, 635);
+            this.accordionControl.Size = new System.Drawing.Size(217, 635);
             this.accordionControl.TabIndex = 1;
             this.accordionControl.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -133,7 +130,8 @@
             this.accordionBottomHome.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionHome_Home,
             this.accordionHome_InfoManage,
-            this.accordionHome_DataView});
+            this.accordionHome_DataView,
+            this.accordionHome_QQManageGroup});
             this.accordionBottomHome.Expanded = true;
             this.accordionBottomHome.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
@@ -146,7 +144,6 @@
             // 
             // accordionHome_Home
             // 
-            this.accordionHome_Home.Expanded = true;
             this.accordionHome_Home.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.homepage;
             this.accordionHome_Home.Name = "accordionHome_Home";
             this.accordionHome_Home.Text = "  Home";
@@ -172,7 +169,6 @@
             this.accordionHome_DataView.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionHome_MssqlGroup,
             this.accordionHome_MysqlGroup});
-            this.accordionHome_DataView.Expanded = true;
             this.accordionHome_DataView.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.data;
             this.accordionHome_DataView.Name = "accordionHome_DataView";
             this.accordionHome_DataView.Text = "  数据查看";
@@ -180,20 +176,19 @@
             // accordionHome_MssqlGroup
             // 
             this.accordionHome_MssqlGroup.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionHome_MssqlSetting,
+            this.accordionHome_MSSQLSetting,
             this.accordionHome_MSSQLView});
-            this.accordionHome_MssqlGroup.Expanded = true;
             this.accordionHome_MssqlGroup.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.mssql;
             this.accordionHome_MssqlGroup.Name = "accordionHome_MssqlGroup";
             this.accordionHome_MssqlGroup.Text = "  MSSQL";
             // 
-            // accordionHome_MssqlSetting
+            // accordionHome_MSSQLSetting
             // 
-            this.accordionHome_MssqlSetting.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.mssql_setting;
-            this.accordionHome_MssqlSetting.Name = "accordionHome_MssqlSetting";
-            this.accordionHome_MssqlSetting.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionHome_MssqlSetting.Tag = "DatabaseSettingControl,MSSQL";
-            this.accordionHome_MssqlSetting.Text = "  MSSQL数据库配置";
+            this.accordionHome_MSSQLSetting.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.mssql_setting;
+            this.accordionHome_MSSQLSetting.Name = "accordionHome_MSSQLSetting";
+            this.accordionHome_MSSQLSetting.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionHome_MSSQLSetting.Tag = "DatabaseSettingControl,MSSQL";
+            this.accordionHome_MSSQLSetting.Text = "  MSSQL数据库配置";
             // 
             // accordionHome_MSSQLView
             // 
@@ -206,20 +201,18 @@
             // accordionHome_MysqlGroup
             // 
             this.accordionHome_MysqlGroup.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionHome_MysqlSetting,
+            this.accordionHome_MYSQLSetting,
             this.accordionHome_MYSQLView});
-            this.accordionHome_MysqlGroup.Expanded = true;
             this.accordionHome_MysqlGroup.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.mysql;
             this.accordionHome_MysqlGroup.Name = "accordionHome_MysqlGroup";
             this.accordionHome_MysqlGroup.Text = "  MYSQL";
             // 
-            // accordionHome_MysqlSetting
+            // accordionHome_MYSQLSetting
             // 
-            this.accordionHome_MysqlSetting.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionHome_MysqlSetting.ImageOptions.Image")));
-            this.accordionHome_MysqlSetting.Name = "accordionHome_MysqlSetting";
-            this.accordionHome_MysqlSetting.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionHome_MysqlSetting.Tag = "DatabaseSettingControl,MYSQL";
-            this.accordionHome_MysqlSetting.Text = "  MYSQL数据库配置";
+            this.accordionHome_MYSQLSetting.Name = "accordionHome_MYSQLSetting";
+            this.accordionHome_MYSQLSetting.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionHome_MYSQLSetting.Tag = "DatabaseSettingControl,MYSQL";
+            this.accordionHome_MYSQLSetting.Text = "  MYSQL数据库配置";
             // 
             // accordionHome_MYSQLView
             // 
@@ -228,6 +221,22 @@
             this.accordionHome_MYSQLView.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionHome_MYSQLView.Tag = "SQLViewControl,MYSQL";
             this.accordionHome_MYSQLView.Text = "  MYSQL查询";
+            // 
+            // accordionHome_QQManageGroup
+            // 
+            this.accordionHome_QQManageGroup.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionHome_QQManageItem1});
+            this.accordionHome_QQManageGroup.Expanded = true;
+            this.accordionHome_QQManageGroup.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.qq;
+            this.accordionHome_QQManageGroup.Name = "accordionHome_QQManageGroup";
+            this.accordionHome_QQManageGroup.Text = "  QQ管理";
+            // 
+            // accordionHome_QQManageItem1
+            // 
+            this.accordionHome_QQManageItem1.Name = "accordionHome_QQManageItem1";
+            this.accordionHome_QQManageItem1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionHome_QQManageItem1.Tag = "QQManageControl";
+            this.accordionHome_QQManageItem1.Text = " 1241513(测试QQ)";
             // 
             // accordionBottomMenu
             // 
@@ -334,6 +343,37 @@
             this.accordionConsole_CSharp.Name = "accordionConsole_CSharp";
             this.accordionConsole_CSharp.Text = "  C#控制台应用";
             // 
+            // accordionBottomQQManage
+            // 
+            this.accordionBottomQQManage.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement13,
+            this.accordionQQList});
+            this.accordionBottomQQManage.Expanded = true;
+            this.accordionBottomQQManage.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.qq_group;
+            this.accordionBottomQQManage.Name = "accordionBottomQQManage";
+            this.accordionBottomQQManage.Text = " QQ管理";
+            // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionAddOneQQ});
+            this.accordionControlElement13.Expanded = true;
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Text = "  QQ基础操作";
+            // 
+            // accordionAddOneQQ
+            // 
+            this.accordionAddOneQQ.ImageOptions.Image = global::WinCommonSoftware.Properties.Resources.add;
+            this.accordionAddOneQQ.Name = "accordionAddOneQQ";
+            this.accordionAddOneQQ.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionAddOneQQ.Tag = "AddQQAccount";
+            this.accordionAddOneQQ.Text = "  登陆QQ号";
+            // 
+            // accordionQQList
+            // 
+            this.accordionQQList.Name = "accordionQQList";
+            this.accordionQQList.Text = "  QQ账户列表";
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -343,7 +383,7 @@
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(971, 27);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(999, 27);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -353,16 +393,28 @@
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Element2";
             // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Text = "QQ列表";
+            // 
+            // accordionControlElement12
+            // 
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement12.Text = "添加一个账号";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 662);
+            this.ClientSize = new System.Drawing.Size(999, 662);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.NavigationControl = this.accordionControl;
@@ -372,7 +424,6 @@
             this.fluentDesignFormContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).EndInit();
             this.xtraTabControl.ResumeLayout(false);
-            this.xtraTableHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
@@ -403,15 +454,22 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionConsole_CSharp;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionConsole_RunCmd;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_DataView;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MSSQLView;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MYSQLView;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MssqlGroup;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MssqlSetting;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MSSQLSetting;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MysqlGroup;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MysqlSetting;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_MYSQLSetting;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionBottomQQManage;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionAddOneQQ;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionQQList;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_QQManageGroup;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionHome_QQManageItem1;
     }
 }
 

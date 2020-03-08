@@ -12,6 +12,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using WinCommonSoftware.Views.HomeGroup.QQManageGroup;
 
 namespace WinCommonSoftware
 {
@@ -38,8 +39,27 @@ namespace WinCommonSoftware
             AccordionControlUtil.Instance.DisableAccordControl(Config.Instance.NotEnAbleAccordControl.Split(','),this.accordionControl.Elements);
             InitXtraTab();
             GlobalCache.Instance.MainFormInstance = this;
+            this.SetHomeTabpage();
         }
-
+        public void AddQQManageAccordionItem(string name,string text,string tag)
+        {
+            text = AccordionControlUtil.Instance.GetThisGroupItemName(this.accordionHome_QQManageGroup.Elements, text, text);
+            var ele = new DevExpress.XtraBars.Navigation.AccordionControlElement()
+            {
+                Name = name,
+                Text = text,
+                Tag = tag,
+                Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+            };
+            this.accordionHome_QQManageGroup.Elements.Add(ele);
+            AccordionControlUtil.Instance.BindAccordionItemTabpageClick(ele, xtraTabControl);
+        }
+        private void SetHomeTabpage()
+        {
+            var qqManageControl = new QQManagerOverviewControl();
+            this.xtraTableHome.Controls.Add(qqManageControl);
+            qqManageControl.Dock = DockStyle.Fill;
+        }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.xtraTabControl.TabPages.ToList().ForEach(t =>

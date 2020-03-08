@@ -9,7 +9,6 @@ namespace WinCommonSoftware
 {
     public class Config : SingletonObject<Config>
     {
-        public string NotEnAbleAccordControl = "";
-            //"accordionBottomMenu,accordionBottomScript";
+        public string NotEnAbleAccordControl = "accordionBottomMenu,accordionBottomScript";
     }
 }

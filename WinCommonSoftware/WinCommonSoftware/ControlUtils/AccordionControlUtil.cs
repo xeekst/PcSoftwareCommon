@@ -40,7 +40,6 @@ namespace WinCommonSoftware.ControlUtils
             xtraTabControl.SelectedTabPage = npage;
             return npage.Text;
         }
-
         public void SelectPageByTitle(string title,XtraTabControl xtraTabControl)
         {
             xtraTabControl.TabPages.ToList().ForEach(e =>
@@ -51,7 +50,6 @@ namespace WinCommonSoftware.ControlUtils
                 }
             });
         }
-
         public void BindTabpageClick(DevExpress.XtraBars.Navigation.AccordionControlElementCollection elements, XtraTabControl xtraTabControl)
         {
             foreach (var ele in elements)
@@ -66,23 +64,25 @@ namespace WinCommonSoftware.ControlUtils
                     {
                         if (ele.Style == DevExpress.XtraBars.Navigation.ElementStyle.Item || ele.Text.Trim() == "Home")
                         {
-                            //添加点击后动态添加tabpage事件
-                            ele.Click += (s, e) =>
-                            {
-                                AddNewPageIfNotExist(ele.Text.Trim(), xtraTabControl);
-                                SelectPageByTitle(ele.Text.Trim(), xtraTabControl);
-                            };
-                            //添加点击后的第二个事件 tabpage上的tag字符串绑定的UserControl 反射实例化后绑定到tabpage上去
-                            ele.Click += (s, e) =>
-                            {
-                                AccordionControl_Load_TabpageControl_Click(s, e, xtraTabControl);
-                            };
+                            BindAccordionItemTabpageClick(ele, xtraTabControl);
                         }
-
                     }
                 }
-
             }
+        }
+        public void BindAccordionItemTabpageClick(DevExpress.XtraBars.Navigation.AccordionControlElement ele, XtraTabControl xtraTabControl)
+        {
+            //添加点击后动态添加tabpage事件
+            ele.Click += (s, e) =>
+            {
+                AddNewPageIfNotExist(ele.Text.Trim(), xtraTabControl);
+                SelectPageByTitle(ele.Text.Trim(), xtraTabControl);
+            };
+            //添加点击后的第二个事件 tabpage上的tag字符串绑定的UserControl 反射实例化后绑定到tabpage上去
+            ele.Click += (s, e) =>
+            {
+                AccordionControl_Load_TabpageControl_Click(s, e, xtraTabControl);
+            };
         }
         public void DisableAccordControl(string[] disableNames, DevExpress.XtraBars.Navigation.AccordionControlElementCollection elements)
         {
@@ -98,6 +98,21 @@ namespace WinCommonSoftware.ControlUtils
                     elements.Remove(ele);
                 }
             }
+        }
+       
+        public string GetThisGroupItemName(DevExpress.XtraBars.Navigation.AccordionControlElementCollection elements,string origintText,string usedText,int count = 0)
+        {
+            foreach(var ele in elements)
+            {
+                if (ele.Text.Equals(usedText))
+                {
+                    count++;
+                    string countText = count > 0 ? string.Format("({0})", count) : "";
+                    usedText = $"{origintText}{countText}";
+                    return GetThisGroupItemName(elements, origintText, usedText, count);
+                }
+            }
+            return usedText;
         }
         #region private methods
         private void AccordionControl_Load_TabpageControl_Click(object sender, EventArgs e, XtraTabControl xtraTabControl)
